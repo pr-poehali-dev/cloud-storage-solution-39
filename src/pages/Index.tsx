@@ -1,5 +1,5 @@
 import { StarField } from "@/components/StarField"
-import { ChevronDown, Linkedin, Users, LineChart, Clock, Lightbulb, BotIcon as Robot } from "lucide-react"
+import { ChevronDown, Linkedin, Cpu, Factory, TrendingUp, ShieldCheck, Globe, Handshake, BotIcon as Robot } from "lucide-react"
 import { ContactForm } from "@/components/ContactForm"
 import { ChatbotModal } from "@/components/ChatbotModal"
 import { useState, useEffect, useRef } from "react"
@@ -241,13 +241,13 @@ export default function Index() {
               }}
             >
               <h1 className="text-4xl font-bold text-white md:text-6xl font-heading">
-                Nebula Ventures{" "}
+                БРИКС Технологии{" "}
                 <span role="img" aria-label="rocket">
                   🚀
                 </span>
               </h1>
-              <p className="mt-4 text-lg text-gray-300 md:text-xl px-4 max-w-xs mx-auto md:max-w-none">
-                Экспертиза в области ИИ и технологий
+              <p className="mt-4 text-lg text-gray-300 md:text-xl px-4 max-w-md mx-auto md:max-w-2xl">
+                Прямой, структурированный и юридически защищённый выход технологических компаний на рынки БРИКС и Global South
               </p>
               <Button
                 onClick={scrollToAbout}
@@ -255,7 +255,7 @@ export default function Index() {
                 size="sm"
                 className="mt-6 bg-transparent text-white border-white hover:bg-white hover:text-black transition-colors"
               >
-                О нас
+                Узнать больше
               </Button>
             </div>
           </div>
@@ -298,16 +298,17 @@ export default function Index() {
                 <h2 className="text-3xl font-bold font-heading">О нас</h2>
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-gray-300">
-                    Мы помогаем компаниям использовать передовые технологии, чтобы радовать клиентов
-                    и оптимизировать бизнес-процессы.
+                    Мы — трёхуровневая профессиональная платформа международной технологической кооперации.
+                    Системный механизм, который соединяет технологические компании с рынками БРИКС и Global South.
                   </p>
                   <p className="text-gray-300">
-                    Стратегическое планирование, техническое лидерство или практическая поддержка разработки —
-                    мы поможем создать правильные решения для вашего бизнеса.
+                    Платформа объединяет профессиональное сообщество (СМТК), Управляющую компанию,
+                    работающую на условиях success fee, и международный консорциум «БРИКС Технологии»
+                    с пулом индустриальных и финансовых партнёров.
                   </p>
                   <p className="text-gray-300">
-                    Наша команда имеет более 10 лет опыта создания сложных технических продуктов
-                    для стартапов и крупных компаний. Свяжитесь с нами или попробуйте ИИ-ассистента.
+                    Мы берём на себя всё — от поиска локальных партнёров и защиты интеллектуальной
+                    собственности до сборки совместных предприятий и привлечения финансирования.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center md:justify-start">
@@ -346,7 +347,7 @@ export default function Index() {
               isServicesTitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Услуги
+            Для кого мы работаем
           </h2>
           <div
             ref={servicesContentRef}
@@ -355,47 +356,76 @@ export default function Index() {
               isServicesVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Fractional CPO */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Tech companies */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Users className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">CPO / CTO на аутсорсе</h3>
+                  <Cpu className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Технологические компании</h3>
                 </div>
                 <p className="text-gray-300">
-                  Продуктовое лидерство, выстраивание процессов, развитие команды, технологическая стратегия.
+                  Доступ к спросу, капиталу и совместным предприятиям на новых рынках —
+                  без отвлечения от текущих проектов.
                 </p>
               </div>
 
-              {/* Product Consulting */}
+              {/* Industrial partners */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <LineChart className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Продуктовый консалтинг</h3>
+                  <Factory className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Индустриальные партнёры</h3>
                 </div>
                 <p className="text-gray-300">
-                  Разработка роадмапа, поиск и валидация product-market fit, оценка кандидатов.
+                  Доступ к проверенным инновациям для решения конкретных производственных
+                  и стратегических задач.
                 </p>
               </div>
 
-              {/* Interim Leadership */}
+              {/* Financial partners */}
               <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
                 <div className="flex items-center mb-4">
-                  <Clock className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Временное руководство</h3>
-                </div>
-                <p className="text-gray-300">Временный CPO или VP of Product для компаний в период трансформации.</p>
-              </div>
-
-              {/* Workshops & Advisory */}
-              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
-                <div className="flex items-center mb-4">
-                  <Lightbulb className="h-7 w-7 text-white mr-4" aria-hidden="true" />
-                  <h3 className="text-xl font-semibold font-heading">Разработка продуктов</h3>
+                  <TrendingUp className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Финансовые партнёры</h3>
                 </div>
                 <p className="text-gray-300">
-                  Быстрое прототипирование и запуск внутренних и внешних приложений и сайтов
-                  с использованием современных инструментов.
+                  Качественный поток проектов с понятной экономикой и глобальным потенциалом
+                  для инвесторов и фондов.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold font-heading text-center mb-8">Что мы берём на себя</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Local partners */}
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <Globe className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Поиск локальных партнёров</h3>
+                </div>
+                <p className="text-gray-300">
+                  Находим проверенных партнёров и каналы выхода на рынки стран БРИКС и Global South.
+                </p>
+              </div>
+
+              {/* IP protection */}
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <ShieldCheck className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Защита ИС и сделок</h3>
+                </div>
+                <p className="text-gray-300">
+                  Юридически защищённая структура сотрудничества и защита интеллектуальной собственности.
+                </p>
+              </div>
+
+              {/* JV & financing */}
+              <div className="bg-gray-800 rounded-lg p-6 transition-all duration-300 hover:bg-gray-700">
+                <div className="flex items-center mb-4">
+                  <Handshake className="h-7 w-7 text-white mr-4" aria-hidden="true" />
+                  <h3 className="text-xl font-semibold font-heading">Сборка СП и финансирование</h3>
+                </div>
+                <p className="text-gray-300">
+                  Формируем совместные предприятия и привлекаем финансирование под проекты.
                 </p>
               </div>
             </div>
@@ -412,7 +442,7 @@ export default function Index() {
               isHeadingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
-            Давайте создавать
+            Начать сотрудничество
           </h2>
           <ContactForm />
         </div>
